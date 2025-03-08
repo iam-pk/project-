@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #a84caf;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .container {
+            width: 55%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            color:#a84caf;
+        }
+
+        .radio-group {
+            margin: 10px 0;
+        }
+
+        .radio-group input {
+            margin-right: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 2rem;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .star-rating input:checked ~ label,
+        .star-rating input:hover ~ label {
+            color: gold;
+        }
+
+        button {
+            background-color: rgb(223, 199, 64);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a34fdf;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Share Your Feedback</h1>
+    </header>
+    <div class="container">
+        <!-- Name and Contact Section -->
+        <div class="section">
+            <h2>Details</h2>
+            <input type="text" class="input-field" placeholder="Enter your name" id="name" required>
+            <input type="email" class="input-field" placeholder="Enter your email address" id="contact" required>
+        </div>
+
+        <!-- Like/Dislike Section -->
+        <div class="section">
+            <h2>Do you like this website?</h2>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="like" value="yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="like" value="no"> No
+                </label>
+            </div>
+        </div>
+
+        <!-- Helpful Section -->
+        <div class="section">
+            <h2>Was this helpful?</h2>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="helpful" value="yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="helpful" value="no"> No
+                </label>
+            </div>
+        </div>
+
+        <!-- Suggestions Section -->
+        <div class="section">
+            <h2>Suggestions</h2>
+            <textarea placeholder="Write your suggestions here..." id="suggestions"></textarea>
+        </div>
+
+        <!-- Rating Section -->
+        <div class="section">
+            <h2>Rate Us:</h2>
+            <img src="images\rating.jpeg">
+            <div class="star-rating">
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">&#9733;</label> <!-- &#9733 code for star-->
+            
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">&#9733;</label>
+            
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">&#9733;</label>
+            
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">&#9733;</label>
+            
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">&#9733;</label>
+            </div>
+            
+        </div>
+
+        <!-- Submit Button -->
+        <div class="section">
+            <button onclick="submitFeedback()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact').value;
+            const like = document.querySelector('input[name="like"]:checked')?.value;
+            const helpful = document.querySelector('input[name="helpful"]:checked')?.value;
+            const suggestions = document.getElementById('suggestions').value;
+            const rating = document.querySelector('input[name="rating"]:checked')?.value;
+
+            if (!name || !contact || !like || !helpful || !rating) {
+                alert("Please fill all required fields before submitting.");
+                return;
+            }
+
+            alert(`Feedback Submitted!\n\nName: ${name}\nContact: ${contact}\nLiked: ${like}\nHelpful: ${helpful}\nRating: ${rating} stars\nSuggestions: ${suggestions}`);
+        }
+    </script>
+</body>
+</html>
