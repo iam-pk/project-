@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(242, 94, 94);
+        }
+
+        /* Logo and Website Name Section */
+        .logo-section {
+            background: #350c01;
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        .logo-section img {
+            width: 50px;
+            vertical-align: middle;
+            border-radius: 10px;
+            
+        }
+
+        .logo-section h1 {
+            font-family: "Permanent Marker", serif;
+            display: inline;
+            color: white;
+            font-size: 2em;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        header {
+            background-image:"images\background.jpg";
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        
+        }
+
+        header h1 {
+            font-family: "Permanent Marker", serif;
+            font-size: 4em;
+            margin: 0;
+        }
+
+        header p {
+            font-family: "Permanent Marker", serif;
+            font-size: 1.2em;
+        }
+
+        nav {
+            width: 100%;
+            background: rgba(61, 13, 13, 0.7);
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: white;
+            color: #0d00ff;
+            border-radius: 5px;
+        }
+        nav a.active {
+            border-bottom: 50px solid white;
+        }
+
+        .container {
+            font-size:20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            font-family: "Permanent Marker", serif;
+            margin: 40px 0;
+        }
+
+        .section h2 {
+            font-family: "Permanent Marker", serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background:  rgb(246, 244, 156);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            width: 700px;
+            border-color: black ;
+            border-style:solid;
+            border-width: 2px;
+            border-color:#d7c90d;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            display: block;
+            margin: auto;
+            width: 700px;
+            height: 300px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            margin: 0;
+        }
+
+        .card-body p {
+            color: #0f1010;
+        }
+
+        footer {
+            background: rgba(61, 13, 13, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #7b69f0;
+            text-decoration: none;
+        }
+
+        .contact {
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo and Name Section -->
+    <div class="logo-section">
+        <img src="images\imageslogo.jpg" alt="Logo"> 
+        <h1>THE JOURNEY</h1> 
+    </div>
+
+    <nav>
+        <a href="http://127.0.0.1:3000/index.html#:~:text=an%20unforgettable%20journey-,About%20Us,-This%20website%20is">About us</a>
+        <a href="destination.html">Destinations</a>
+        <a href="review.html">Review</a>
+        <a href="http://127.0.0.1:3000/index.html#:~:text=around%20the%20world.-,Contact%20Us,-Pragya%20Katiyar">To Contact</a>
+    </nav>
+
+    <header>
+        <h1>Welcome to Bharatvarsh</h1>
+        <p>"From majestic landscapes to vibrant cultures,<br> embark on an unforgettable journey</p>
+    </header>
+
+    <div class="container">
+        <section id="about" class="section">
+            <img src="images\background.jpg" alt="Welcome Image" style="max-width: 95%;  border-radius: 10px;  margin: auto;">
+            <u><h2>About Us</h2></u>
+            <p>This website is about the beautiful culture,landscape of Bharatvarsh.
+                We are passionate about bringing you closer to the deep core beauty of it.
+                India, a land of vibrant cultures, ancient heritage, and breathtaking landscapes, is a destination like no other. 
+                Here we aim to bring this incredible diversity closer to you. Whether you are looking to explore the serene backwaters of Kerala, the majestic forts of Rajasthan, or the bustling streets of Mumbai, we've got you covered.</p>
+                <a href="about.html">To know more...</a>
+        </section>
+
+        <section id="destinations" class="section">
+            <u><h2>Top Destinations</h2></u>
+            <div class="card">
+                <img src="images\utrakhand.jpg" alt="Uttarakhand">
+                <div class="card-body">
+                    <h3>Uttarakhand</h3>
+                    <p>Experience the serene beauty of the Himalayas, spiritual retreats, and breathtaking trekking trails. Nestled in the lap of the majestic Himalayas, Uttarakhand is a paradise for nature lovers, adventure enthusiasts, and spiritual seekers. Known as "Devbhoomi" or the "Land of Gods," this northern state of India is dotted with sacred temples, serene rivers, and lush green valleys.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images\rajasthan.jpg" alt="Rajasthan">
+                <div class="card-body">
+                    <h3>Rajasthan</h3>
+                    <p>Rajasthan, the largest state in India, is a land of majestic forts, opulent palaces, vibrant festivals, and rich cultural heritage. Known as the "Land of Kings," it offers a glimpse into India's royal past, surrounded by the golden sands of the Thar Desert and bustling markets brimming with art and tradition.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images\uttarpradesh.jpg" alt="Uttar Pradesh">
+                <div class="card-body">
+                    <h3>Uttar Pradesh</h3>
+                    <p>Uttar Pradesh, often called the "Heartland of India," is a state rich in history, culture, spirituality, and architectural marvels. It is home to some of the most iconic landmarks and sacred sites in the country, making it a must-visit destination for travelers from around the world.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <p>Pragya Katiyar</p>
+                <p>Reach out to us at : iampragyakatiyar@gmail.com</p>
+                <p>Instagram handle: <a href="https://www.instagram.com/creative_colours5?igsh=ZTRpM2czdWZ4MHhw">creative_colours5</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The Journey. All rights reserved. <a>Pragya Katiyar</a></p>
+    </footer>
+</body>
+</html>
