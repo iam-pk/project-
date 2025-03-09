@@ -1,2 +1,2 @@
 # project-
-Basic python project
+web project
